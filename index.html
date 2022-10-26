@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="callback.js">
+</head>
+<body>
+    <h1>student list</h1>
+    <div id="students"></div>
+    <script>
+        // function greet(){
+        //     console.log('Good Morning')
+        // }
+//         greet = () => {
+//             console.log('Good night') 
+//                }
+//         greet();
+//         setTimeout(() => {
+
+//             console.log("we are insise the set time out function");
+            
+//         }, 3000);
+//         let sum = (a,b)=> a+b;
+
+//         let half = a => a/2;
+
+//         let people = {
+//             greeting : 'Good Morning',
+//             name:['hamza','ahmad','ifraz'],
+//             age:23,
+//             speak(){
+//                 this.name.forEach((student)=>{
+//                     console.log(this.greeting + "Nice day" + student);
+
+//                 });
+//             }
+//         }
+//         people.speak();
+
+//         const funA = () => {
+
+//             setTimeout(() => {
+
+//                 console.log(`WELCOME Fun A`);
+                
+//             }, 1000);
+            
+    
+
+//    }
+//    const funB = () => {
+//     setTimeout(() => {
+
+//         console.log(`WELCOME Fun B `);
+
+        
+//     }, 2000);
+
+//     const perOne = (friend, callfriend, call3, anymous)=> {
+//         console.log(`i will busy right now i am talking to ${friend} i will call you back`);
+//         callfriend();
+//         call3();
+//         anymous();
+//         debugger;
+        
+//     }
+
+
+//     const pertwo = ()=> {
+//         console.log(`i will call you back at once`);
+//     }
+
+//     const perthree = ()=> {
+//         console.log(`this is me`);
+//     }
+    
+//   perOne("hamza",pertwo,perthree, function (){
+//     console.log("BYE...");
+//   });
+
+//   funA();
+//   funB();
+
+var arr = [20,10,30,40,50];
+
+// var arr = new Array();
+// for (var g =0; g<3;g++){
+//     arr[g]=prompt("enter the value: ");
+// }
+// arr[0]= 'hamza';
+// arr[1]= 30;
+
+// for (var a =0 ; a<=4 ;a++){
+//     document.write(arr[a] + "<br>");
+// }
+
+// var length = arr.length;
+// alert(length);
+var Array1 = ["10","hamza", '100'];
+// Array.reverse();
+// Array.shift();
+// Array.unshift("hahahaah");
+// Array.pop();
+// Array.push(`22200`);
+// arr.sort();
+// var check = Array.isArray(Array1);
+// document.write(Array1.indexOf("hamza"));
+
+const ary = [100,23,23,4];
+ 
+// const b = ary.map(test)
+
+// const b = ary.map(n => n* 10);
+
+const b = ary.map(
+    (n) => {
+    return n * 10;
+});
+// } 
+// document.write(b);
+
+//     function test (x) {
+//         return x * 10;
+//     }
+
+    var arr = [
+        {name:"hamza", subject:"mern"},
+        {name:"ali", subject:"mern"},
+        {name:"heheh", subject:"mern"},
+    ];
+    // const c =arr.map(test)
+    // const c = arr.map (x=> x.name)
+    const c =arr.map( (x) => {
+        return x.subject;
+    });
+    // document.write(c);
+
+    // function test (x) {
+    //     return x.name;
+    // }
+
+// filter method 
+
+     let arr2 = [45,4,54,54,,45,1];
+     let arr3 = arr2.filter((value)=>{
+
+        return value == 1;
+
+     });
+     document.write(arr3)
+     console.log(arr3)
+
+
+
+     var ages = [10,20,33,18];
+    //  document.write(" " + ages)
+     var d = ages.filter((age)=>{
+
+        return age >18;
+     });
+    //  document.write(d);
+
+     let team = [
+        {
+            name: "hamza",
+            age:"20"
+        },
+        {
+            name: "usama",
+            age:"20"
+        },
+        {
+            name: "ali",
+            age:"21"
+        },
+        {
+            name: "hamza",
+            age:"23"
+        },
+
+     ];
+     const age = team.filter(value => value.age > 20);
+      document.write(age);
+    //   console.log(age);
+
+
+      const myFavPro = ['js', 'pyhthon', 'css','html'];
+
+    //   for( let x=0; x<myFavPro.length; x++){
+    //      console.log(myFavPro[x]);
+
+    //   }
+
+      myFavPro.forEach(function(element, index){
+        // console.log(element, index);
+
+      });
+
+      const arr5 = [10,20,30,40];
+      arr5.forEach(function(value,index,arr){
+        // return value * 100;
+        // console.log(arr[index]+ 100);
+        
+      });
+     
+
+    //   console.log(myFavPro[2]);
+
+
+   
+    
+
+    let array=[1,2,3,4,5,6];
+    // let sum = array.reduce((accum,curr)=>{
+
+    //     return accum+curr;
+
+    // },2)
+    // console.log(sum);
+
+    let average = array.reduce((accum, curr, index,array )=>{
+
+        let total = accum += curr;
+        if(index===array.length-1){
+            return total/array.length;
+        }
+        return total;
+        
+    })
+    // console.log(average)
+
+    let obj = {
+        firstname : "hamza",
+        lastname : "sheikh",
+        age:23,
+        email: "hamza@gmail.com",
+
+    };
+    for (let a in obj){
+        document.write(obj[a]);
+        // console.log(a.firstname)
+    }
+    
+// for of loop 
+
+people = ["hamza" , "usama", "ifraz"];
+    for (let index = 0; index < people.length; index++) {
+        const element = people[index];
+        // console.log(element);
+        
+    }
+    myString = "this is my first string";
+    for (let index = 0; index < myString.length; index++) {
+        const element = myString[index];
+        // console.log(element)
+        
+    }
+    
+    people2 = ["hamza" , "usama", "ifraz"];
+  
+    for (let b of people2){
+    // console.log(b)
+
+ }
+
+//  while loops 
+
+// let n = prompt("enter the value of n");
+// // let i =0;
+// while(i<n){
+
+//     // console.log(i);
+//     i++;
+
+
+// }
+
+// let a = prompt("enter your number")
+//  a = Number.parseInt(a)
+// let i = 0;
+// do{
+//   i+=2
+//   i++
+//   console.log(i)
+// }while(a>i)
+
+// console.log(f);
+// debugger;
+// var f =10;
+
+
+
+// Scynronous 
+// const func2= ()=>{
+//     setTimeout(()=>{
+//         console.log('fun2 is starting');
+
+//     }, 3000);
+ 
+// }
+// const fun1 = ()=>{
+//     console.log('func 1 is starting');
+//     func2();
+//     console.log('fun1 is ending');
+
+// }
+// fun1();
+
+// hoisitng
+
+// function sum (a,b){
+//     add= a+b;
+//     console.log(add);
+// }
+// sum(3,3);
+
+// let array8= ['4','9','7','3','4','7','9'];
+// // const uniquevalue = (array)=>{
+
+// //     return array;
+
+// // }
+// const uniquevalue = (array)=> (array
+
+// );
+
+// uniquevalue(array8);
+// console.log(array8);
+
+let a = ["1", "1", "4", "3", "3", "1"];
+
+for (let i = 0; i < a.length; i++) {
+
+   for (let j = 0; j < a.length; j++) {
+    let flag = true;
+    if (i==j) {
+        continue;    
+    }
+    if(a[i]==a[j]);
+    {
+        flag = false;
+    }
+
+   } 
+   if (flag){
+
+    console.log(a[i]);
+
+   }  
+
+}
+
+// let i = a.filter(x=>{
+//     return a.findIndex(y=>y==x)==a.lastIndexOf(x);
+// }) 
+// console.log(i);
+
+// for loop  
+
+
+
+
+
+// let unique = a.filter((item, i, ar) => ar.indexOf(item) === i);
+// console.log(unique);
+
+// let unique = a.filter((item,i,arr)=>
+// a.indexOf==='2'
+// );
+// console.log(unique);
+
+
+</script
+    
+</body>
+</html>
