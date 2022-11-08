@@ -1,0 +1,19 @@
+[
+    {"id":1,
+    "room":101,
+    "subject":"OOP"
+    },
+    {"id":2,
+    "room":102,
+    "subject":"C++"
+    },
+    {
+        "id":3,
+        "room":207,
+        "subject":"DSA"
+        },
+        {
+            "id":4,
+            "room":208,
+            "subject":"OS",
+            "students":[{"id":1,"name":"hamza","rollnumber":1,"department":"Cs"},{"id":2,"name":"ali","rollnumber":2,"department":"Se"}],"teacher":{"id":2,"name":"Dr Hammad","Course":"C++"}}]
